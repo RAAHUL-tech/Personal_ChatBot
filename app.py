@@ -28,7 +28,7 @@ if "vector" not in st.session_state:
     st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs)
     st.session_state.vectors=FAISS.from_documents(st.session_state.final_documents,st.session_state.embeddings)
 
-st.title("ChatGroq Demo")
+st.title("Personal ChatBot")
 llm=ChatGroq(groq_api_key=groq_api_key,
              model_name="mixtral-8x7b-32768")
 
